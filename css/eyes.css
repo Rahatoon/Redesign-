@@ -1,0 +1,128 @@
+/* Based on the Cursor Monster
+ * by simurai
+ *
+ */
+
+/* Eyes
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	--eye-scale: scale(0.6);
+}
+.eye {
+	transform: var(--eye-scale);
+}
+.eye:nth-child(1) {
+	left: 37px;
+	margin: 0;
+	top: 53px;
+}
+.eye:nth-child(2) {
+	left: 136px;
+	margin: 0;
+	top: -6px;
+}
+.eye:nth-child(2) .eye:nth-child(1) {
+	left: 40px;
+}
+.portrait2 .eye:nth-child(2) {
+    left: 130px;
+}
+.eye {
+	position: relative;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	background-color: #ccc4c4;
+	box-shadow: inset rgba(0,0,0,.4) 0 -1px 3px 1px, inset rgba(0,0,0,.5) 0 -5px 20px,  rgba(0,0,0,.5) 0 -5px 10px, rgba(255,255,255,.5) 0 5px 10px;
+		
+	background-repeat: no-repeat;				
+	background-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 12%,rgba(45,104,134,1) 22%,rgba(32,74,96,1) 40%,rgba(255,255,255,0) 50%); 
+	
+}
+.portrait2 .eye {
+	background-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 12%,rgba(46,107,97,1) 22%,rgba(15,36,36,1) 40%,rgba(255,255,255,0) 50%); 
+}
+
+
+.eye:before {
+	content: "";
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	border-radius: 4px;
+	width: 8px;
+	height: 8px;
+	background-color: rgba(255,255,255,0.7);
+	transform: skewX(-10deg);
+}
+
+
+
+
+
+/* Wie is Wie
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.profiles {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 10em;
+	row-gap: 4em;
+}
+.profile {
+    width: var(--portrait-dimension); 
+    margin: 0 auto;  
+}
+.profile h3 {
+    padding-top: 2.4rem;
+    margin-bottom: 1.2rem;
+	text-align: center;
+}
+.profile ul.contact-list.contact-list-normal li {
+    color: var(--color-primary);
+}
+.profile ul.contact-list.contact-list-normal li i {
+	margin-right: 12px;
+	color: var(--color-black);
+	opacity: 0.4;
+}
+.profile ul.contact-list.contact-list-normal li .fab.fa-linkedin-in {
+ 	opacity: 0.35;
+}
+.profile ul.contact-list.contact-list-normal li a {
+	color: var(--color-primary);
+    text-decoration: none;
+}
+.profile ul.contact-list.contact-list-normal li a:hover {
+    color: var(--color-black);
+    text-decoration: underline dashed;
+}
+:root {
+	--portrait-dimension: 12.3em;
+}
+.portrait,
+.portrait-overlay {
+    width: var(--portrait-dimension);
+    height: var(--portrait-dimension); 
+    border-radius: 50%;
+    position: relative;
+    background: url(https://zodan.nl/wp/wp-content/themes/zodan_v6/img/content/portrait-dummy-pic.jpg) no-repeat center top / var(--portrait-dimension) var(--portrait-dimension);
+}
+.portrait-overlay {
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.portrait.portrait1 {
+    background: url(https://zodan.nl/wp/wp-content/themes/zodan_v6/img/content/portrait-dummy-pic1.jpg) no-repeat center top / 220px 220px;
+}
+.portrait-overlay.portrait-overlay1 {
+    background-image: url(https://zodan.nl/wp/wp-content/themes/zodan_v6/img/content/portrait-dummy-pic1-overlay.png);
+}
+.portrait.portrait2 {
+    background: url(https://zodan.nl/wp/wp-content/themes/zodan_v6/img/content/portrait-dummy-pic2.jpg) no-repeat center top / 220px 220px;
+}
+.portrait-overlay.portrait-overlay2 {
+    background-image: url(https://zodan.nl/wp/wp-content/themes/zodan_v6/img/content/portrait-dummy-pic2-overlay.png);
+}
